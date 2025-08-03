@@ -149,7 +149,7 @@ except Exception as e:
 # -------------------------------
 # 🔥 TRICKY QUESTION #4: Undefined Variable
 # -------------------------------
-
+score=12
 try:
     print("Q4:", score)
 except NameError as e:

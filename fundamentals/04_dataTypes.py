@@ -188,3 +188,31 @@ for k in d:
     print(f"{k}: {d[k]}")
 
 print("name" in d)
+
+
+# Pass by Reference and Pass by Value
+# One important thing to note is, in Python every variable name is a reference. When we pass a variable to a function Python, a new reference to the object is created.
+# Parameter passing in Python is the same as reference passing in Java.
+# Here x is a new reference to same list lst
+def myFun(x):
+    x[0] = 20
+
+# Driver Code (Note that lst is modified
+# after function call.
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)  # Output: [20, 11, 12, 13, 14, 1
+print(lst)
+
+# Recursive Functions in Python
+# Recursion in Python refers to when a function calls itself. There are many instances when you have to build a recursive function to solve Mathematical and Recursive Problems.
+
+# Using a recursive function should be done with caution, as a recursive function can become like a non-terminating loop. It is better to check your exit statement while creating a recursive function.
+
+def factorial(n):
+    if n == 0:  
+        return 1
+    else:
+        return n * factorial(n - 1) 
+      
+print(factorial(4))
